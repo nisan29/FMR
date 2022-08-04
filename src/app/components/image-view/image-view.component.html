@@ -1,0 +1,9 @@
+<div class="image" *ngIf="selectedImage | async as selectedImage">
+  <div class="row">
+    <div class="col-lg-12 center">
+      <div class="image__image-container">
+        <img  [src]="selectedImage.download_url" width="500" height="450">
+      </div>
+    </div>
+  </div>
+</div>

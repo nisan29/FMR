@@ -1,0 +1,7 @@
+<cdk-virtual-scroll-viewport appendOnly="true" itemSize="100" class="viewport">
+  <ng-container *cdkVirtualFor="let image of images | async">
+    <!-- <div> -->
+      <img [src]="image.download_url" height="100" width="120" (click)="onClick(image)">
+    <!-- </div> -->
+  </ng-container>
+</cdk-virtual-scroll-viewport>

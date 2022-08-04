@@ -1,0 +1,21 @@
+<!-- <header class="top"> -->
+<div class="meta-data">
+  <ul *ngIf="(selectedImage | async) as selectedImage">
+    <li>
+      <strong>#:</strong>
+      <span>{{selectedImage.id}}</span>
+    </li>
+    <li>
+      <strong>W:</strong>
+      <span>{{selectedImage.width}}</span>
+    </li>
+    <li>
+      <strong>H:</strong>
+      <span>{{selectedImage.height}}</span>
+    </li>
+    <li>
+      <strong>author:</strong>
+      <span>{{selectedImage.author}}</span>
+    </li>
+  </ul>
+</div>
