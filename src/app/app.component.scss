@@ -1,0 +1,43 @@
+:root {
+  --header-height: 100px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.ip-wrapper {
+  align-content: start;
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  grid-template-areas: "header header" "aside main";
+  grid-template-columns: 200px 1fr;
+  height: 100vh;
+}
+
+.ip-header {
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  grid-name: header;
+  grid-column: -1/1;
+  height: var(--header-height);
+}
+
+.ip-aside {
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  grid-name: aside;
+  height: calc(100vh - 50px);
+  overflow-y: hidden;
+  padding: 10px;
+  // row-gap: 10px;
+}
+
+.ip-main {
+  display: grid;
+  grid-name: main;
+  place-content: center;
+}
