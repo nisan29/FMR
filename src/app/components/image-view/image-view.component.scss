@@ -14,3 +14,18 @@
     margin: auto;
   }
 }
+@media screen and (max-width: 540px) {
+  .image{
+    display: block;
+  }
+
+  img{
+    width: 150px;
+    height: 200px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+}
