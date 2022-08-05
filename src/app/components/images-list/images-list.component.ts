@@ -17,7 +17,7 @@ export class ImagesListComponent implements OnInit {
     this.images = this.imageService.getImages();
   }
 
-  onClick(selectedImage) {
+  onClick(selectedImage: Iimage) {
     this.imageService.imageDetailsSelected(selectedImage);
   }
 }
