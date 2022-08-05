@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
     fromEvent(document, 'mouseover')
       .pipe(filter((event: MouseEvent) =>
         (event.target as HTMLElement).nodeName.toLowerCase() === 'img'))
-      .subscribe(s => console.log(s.target as HTMLElement));
+      .subscribe(e => console.log(e.target as HTMLElement));
   }
 
 }
