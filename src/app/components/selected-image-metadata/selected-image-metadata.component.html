@@ -1,6 +1,6 @@
 <!-- <header class="top"> -->
 <div class="meta-data">
-  <ul *ngIf="(selectedImage | async) as selectedImage">
+  <ul *ngIf="(selectedImage | async) as selectedImage; else notSelectedYet">
     <li>
       <strong>#:</strong>
       <span>{{selectedImage.id}}</span>
@@ -19,3 +19,6 @@
     </li>
   </ul>
 </div>
+<ng-template #notSelectedYet>
+  <div class="notSelectedYet">Please select an image..</div>
+</ng-template>
