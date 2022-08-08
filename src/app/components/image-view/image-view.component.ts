@@ -9,12 +9,12 @@ import { ImageService } from 'src/app/services/image.service';
   styleUrls: ['./image-view.component.scss']
 })
 export class ImageViewComponent implements OnInit {
-  selectedImage: Observable<Iimage>;
+  selectedImage$: Observable<Iimage>;
 
   constructor(private imageService: ImageService) { }
 
   ngOnInit(): void {
-    this.selectedImage = this.imageService.selectedImageDetails$;
+    this.selectedImage$ = this.imageService.selectedImageDetails$;
   }
 
 }

@@ -9,12 +9,12 @@ import { ImageService } from 'src/app/services/image.service';
   styleUrls: ['./selected-image-metadata.component.scss']
 })
 export class SelectedImageMetadataComponent implements OnInit {
-  selectedImage: Observable<Iimage>;
+  selectedImage$: Observable<Iimage>;
 
   constructor(private imageService: ImageService) { }
 
   ngOnInit(): void {
-    this.selectedImage = this.imageService.selectedImageDetails$;
+    this.selectedImage$ = this.imageService.selectedImageDetails$;
   }
 
 }

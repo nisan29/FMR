@@ -1,6 +1,6 @@
 <!-- <header class="top"> -->
 <div class="meta-data">
-  <ul *ngIf="(selectedImage | async) as selectedImage; else notSelectedYet">
+  <ul *ngIf="(selectedImage$ | async) as selectedImage; else notSelectedYet">
     <li>
       <strong>#:</strong>
       <span>{{selectedImage.id}}</span>

@@ -9,12 +9,12 @@ import { ImageService } from 'src/app/services/image.service';
   styleUrls: ['./images-list.component.scss']
 })
 export class ImagesListComponent implements OnInit {
-  images: Observable<Iimage[]>;
+  images$: Observable<Iimage[]>;
 
   constructor(private imageService: ImageService) { }
 
   ngOnInit(): void {
-    this.images = this.imageService.getImages();
+    this.images$ = this.imageService.getImages();
   }
 
   onClick(selectedImage: Iimage) {
