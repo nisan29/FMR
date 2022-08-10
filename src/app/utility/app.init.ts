@@ -5,8 +5,12 @@ export function initializeKeycloak(keycloak: KeycloakService):() => Promise<bool
     keycloak.init({
       config: {
         url: 'http://localhost:8080/auth',
-        realm: 'your-realm',
-        clientId: 'your-client-id'
+        realm: 'testforangular',
+        clientId: 'testforangularclient'
+      },
+      initOptions: {
+        checkLoginIframe: true,
+        checkLoginIframeInterval: 25
       }
     });
 }

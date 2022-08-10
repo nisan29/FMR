@@ -10,8 +10,8 @@ import { ImageViewComponent } from './components/image-view/image-view.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-// import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
-// import { initializeKeycloak } from './utility/app.init';
+import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+import { initializeKeycloak } from './utility/app.init';
 
 @NgModule({
   declarations: [
@@ -27,15 +27,15 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
     ScrollingModule,
-    // KeycloakAngularModule
+    KeycloakAngularModule
   ],
   providers: [
-    // {
-    //   provide: APP_INITIALIZER,
-    //   useFactory: initializeKeycloak,
-    //   multi: true,
-    //   deps: [KeycloakService]
-    // }
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeKeycloak,
+      multi: true,
+      deps: [KeycloakService]
+    }
   ],
   bootstrap: [AppComponent]
 })
